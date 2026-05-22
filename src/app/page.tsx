@@ -181,30 +181,8 @@ export default function Home() {
               <Link href="/contact">We can crack it.</Link>
             </Button>
           </motion.div>
-
-          {/* Box 5: Custom SVG replacement for Rubiks Cube - Cracked Egg revealing gold */}
-          <motion.div variants={FADE_UP} className="md:col-span-1 bg-[var(--color-brand-gray)] border border-white/5 rounded-3xl p-8 flex flex-col justify-between relative overflow-hidden group">
-            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[var(--color-brand-accent)] z-10">
-              <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-brand-accent)]"></span>
-              Metaphor
-            </div>
-            {/* Custom vector showing egg cracking open revealing warm gold core */}
-            <div className="w-full h-32 flex items-center justify-center relative my-4">
-              <svg className="w-28 h-28 text-[var(--color-brand-accent)] transition-transform duration-500 group-hover:scale-105" viewBox="0 0 100 100" fill="none">
-                {/* Left shell segment */}
-                <path d="M48 20 C35 20, 20 35, 20 55 C20 70, 30 80, 48 80 C48 80, 42 65, 48 55 C52 45, 45 35, 48 20 Z" fill="currentColor" opacity="0.85" />
-                {/* Right shell segment */}
-                <path d="M52 20 C65 20, 80 35, 80 55 C80 70, 70 80, 52 80 C52 80, 58 65, 52 55 C48 45, 55 35, 52 20 Z" fill="currentColor" opacity="0.85" />
-                {/* Glowing gold yolk in split */}
-                <circle cx="50" cy="50" r="14" fill="#F5F1EA" />
-                <circle cx="50" cy="50" r="14" stroke="currentColor" strokeWidth="2" strokeDasharray="4 2" />
-              </svg>
-            </div>
-            <p className="text-xs text-[var(--color-brand-gray-dark)] leading-tight z-10">Cracking open latent value inside established brands.</p>
-          </motion.div>
-
-          {/* Box 6: Satisfied Clients Row (Unused / Now Box 6) */}
-          <motion.div variants={FADE_UP} className="md:col-span-1 bg-[var(--color-brand-accent)] text-white rounded-3xl p-8 flex flex-col justify-center items-center text-center">
+          {/* Box 6: Satisfied Clients Row (Now Box 5) */}
+          <motion.div variants={FADE_UP} className="md:col-span-2 bg-[var(--color-brand-accent)] text-white rounded-3xl p-8 flex flex-col justify-center items-center text-center">
             <h2 className="text-7xl font-heading font-bold text-white">14+</h2>
             <p className="text-xs font-bold uppercase tracking-widest mt-2 text-white/80">Satisfied Clients</p>
           </motion.div>
@@ -309,7 +287,7 @@ export default function Home() {
           Pricing
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           
           {/* Card 1: Subscription/Labs */}
           <motion.div 
@@ -345,47 +323,6 @@ export default function Home() {
               </li>
             </ul>
             <Button asChild className="w-full bg-[var(--color-brand-accent)] text-white hover:bg-[var(--color-brand-blue-dark)]">
-              <Link href="/contact">Start a project</Link>
-            </Button>
-          </motion.div>
-
-          {/* Card 2: Subscription Plus */}
-          <motion.div 
-            initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={FADE_UP} transition={{ delay: 0.1 }}
-            className="bg-[var(--color-brand-gray)] border-2 border-[var(--color-brand-accent)] text-white rounded-3xl p-8 flex flex-col h-full hover:-translate-y-2 transition-transform duration-300 shadow-xl"
-          >
-            <div className="flex justify-between items-center mb-4">
-              <h3 className="text-xl font-bold font-heading text-[var(--color-brand-offwhite)]">Subscription Plus</h3>
-              <span className="bg-[var(--color-brand-accent)] text-white text-xs font-bold px-2 py-1 rounded-full uppercase tracking-wide">+plus</span>
-            </div>
-            <p className="text-[var(--color-brand-gray-dark)] mb-6 text-sm">
-              Retainer-based growth. Expanded support including custom landing page builds, extensive paid ads support, and custom visual shoots.
-            </p>
-            <p className="font-medium mb-8 text-sm text-[var(--color-brand-offwhite)]">Accelerated growth with embedded media buyers.</p>
-            
-            <div className="text-3xl font-bold mb-8 text-[var(--color-brand-offwhite)]">
-              From $4,500<span className="text-sm font-medium text-[var(--color-brand-gray-dark)]">/mo</span>
-            </div>
-            
-            <ul className="space-y-3 mb-8 text-sm font-medium flex-1 text-[var(--color-brand-offwhite)]">
-              <li className="flex items-center gap-3">
-                <div className="w-5 h-5 rounded-full bg-[var(--color-brand-accent)] flex items-center justify-center text-white text-xs">✓</div>
-                All standard subscription channels
-              </li>
-              <li className="flex items-center gap-3">
-                <div className="w-5 h-5 rounded-full bg-[var(--color-brand-accent)] flex items-center justify-center text-white text-xs">✓</div>
-                Embedded media buying (Ads)
-              </li>
-              <li className="flex items-center gap-3">
-                <div className="w-5 h-5 rounded-full bg-[var(--color-brand-accent)] flex items-center justify-center text-white text-xs">✓</div>
-                High-converting landing pages
-              </li>
-              <li className="flex items-center gap-3">
-                <div className="w-5 h-5 rounded-full bg-[var(--color-brand-accent)] flex items-center justify-center text-white text-xs">✓</div>
-                Bi-weekly analytics reports
-              </li>
-            </ul>
-            <Button asChild variant="yellow" className="w-full bg-[var(--color-brand-accent)] text-white hover:bg-[var(--color-brand-blue-dark)]">
               <Link href="/contact">Start a project</Link>
             </Button>
           </motion.div>
