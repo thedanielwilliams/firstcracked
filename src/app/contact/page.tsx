@@ -50,7 +50,7 @@ export default function ContactPage() {
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="bg-[var(--color-brand-gray)] p-8 md:p-12 rounded-3xl"
+          className="bg-[var(--color-brand-gray)] border border-white/5 p-8 md:p-12 rounded-3xl"
         >
           {isSuccess ? (
             <motion.div 
@@ -58,62 +58,60 @@ export default function ContactPage() {
               animate={{ opacity: 1, scale: 1 }}
               className="h-full min-h-[400px] flex flex-col items-center justify-center text-center space-y-4"
             >
-              <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center text-white mb-4">
+              <div className="w-16 h-16 bg-[var(--color-brand-accent)] rounded-full flex items-center justify-center text-white mb-4">
                 <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <h3 className="text-3xl font-bold font-heading">Message Sent</h3>
+              <h3 className="text-3xl font-bold font-heading text-[var(--color-brand-offwhite)]">Message Sent</h3>
               <p className="text-[var(--color-brand-gray-dark)]">Redirecting you to the home page...</p>
             </motion.div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-2">
-                <label htmlFor="name" className="text-sm font-bold text-[var(--color-brand-dark)]">First + Last Name</label>
+                <label htmlFor="name" className="text-sm font-bold text-[var(--color-brand-offwhite)]">First + Last Name</label>
                 <input 
                   type="text" 
                   id="name"
                   name="name"
                   required
                   placeholder="Jane Doe"
-                  className="w-full bg-white border-2 border-transparent focus:border-[var(--color-brand-blue)] rounded-xl px-4 py-4 text-[var(--color-brand-dark)] outline-none transition-colors shadow-sm"
+                  className="w-full bg-[#111111] border-2 border-white/5 focus:border-[var(--color-brand-accent)] rounded-xl px-4 py-4 text-[var(--color-brand-offwhite)] outline-none transition-colors shadow-sm placeholder:text-zinc-600"
                 />
               </div>
 
               <div className="space-y-2">
-                <label htmlFor="email" className="text-sm font-bold text-[var(--color-brand-dark)]">Email Address</label>
+                <label htmlFor="email" className="text-sm font-bold text-[var(--color-brand-offwhite)]">Email Address</label>
                 <input 
                   type="email" 
                   id="email"
                   name="email"
                   required
                   placeholder="name@firstcracked.com"
-                  className="w-full bg-white border-2 border-transparent focus:border-[var(--color-brand-blue)] rounded-xl px-4 py-4 text-[var(--color-brand-dark)] outline-none transition-colors shadow-sm"
+                  className="w-full bg-[#111111] border-2 border-white/5 focus:border-[var(--color-brand-accent)] rounded-xl px-4 py-4 text-[var(--color-brand-offwhite)] outline-none transition-colors shadow-sm placeholder:text-zinc-600"
                 />
               </div>
 
               <div className="space-y-2">
-                <label htmlFor="message" className="text-sm font-bold text-[var(--color-brand-dark)]">Message</label>
+                <label htmlFor="message" className="text-sm font-bold text-[var(--color-brand-offwhite)]">Message</label>
                 <textarea 
                   id="message"
                   name="message"
                   required
                   rows={4}
                   placeholder="Leave us a message..."
-                  className="w-full bg-white border-2 border-transparent focus:border-[var(--color-brand-blue)] rounded-xl px-4 py-4 text-[var(--color-brand-dark)] outline-none transition-colors shadow-sm resize-none"
+                  className="w-full bg-[#111111] border-2 border-white/5 focus:border-[var(--color-brand-accent)] rounded-xl px-4 py-4 text-[var(--color-brand-offwhite)] outline-none transition-colors shadow-sm resize-none placeholder:text-zinc-600"
                 />
               </div>
 
               <Button 
                 type="submit" 
-                variant="yellow" 
-                size="lg" 
-                className="w-full mt-4"
+                className="w-full mt-4 bg-[var(--color-brand-accent)] hover:bg-[var(--color-brand-blue-dark)] text-white font-bold"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? (
                   <div className="flex items-center gap-2">
-                    <div className="w-5 h-5 border-2 border-[var(--color-brand-dark)] border-t-transparent rounded-full animate-spin"></div>
+                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
                     Sending...
                   </div>
                 ) : "Submit"}

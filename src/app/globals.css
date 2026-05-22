@@ -3,21 +3,25 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-inter);
-  --font-heading: var(--font-clash);
+  --font-sans: var(--font-sans);
+  --font-heading: var(--font-heading);
 
-  --color-brand-blue: #2563EB;
-  --color-brand-blue-dark: #1D4ED8;
-  --color-brand-yellow: #EAB308;
-  --color-brand-yellow-dark: #CA8A04;
-  --color-brand-dark: #0F172A;
-  --color-brand-gray: #F1F5F9;
-  --color-brand-gray-dark: #475569;
+  --color-brand-accent: #FF4A1C;
+  --color-brand-offwhite: #F5F1EA;
+  --color-brand-dark: #0E0E0E;
+  --color-brand-gray: #1A1A1A;
+  --color-brand-gray-dark: #8E8A85;
+  
+  /* Legacy mappings to preserve compatibility */
+  --color-brand-blue: #FF4A1C;
+  --color-brand-blue-dark: #E03E15;
+  --color-brand-yellow: #FF4A1C;
+  --color-brand-yellow-dark: #E03E15;
 }
 
 :root {
-  --background: #F8FAFC;
-  --foreground: #0F172A;
+  --background: #0E0E0E;
+  --foreground: #F5F1EA;
 }
 
 body {
@@ -28,15 +32,41 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Glassmorphism utilities */
+h1, .h1-display {
+  font-family: var(--font-heading), serif;
+  font-size: 2.75rem; /* 44px mobile */
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  h1, .h1-display {
+    font-size: 5.5rem; /* 88px desktop */
+  }
+}
+
+/* Glassmorphism utilities adapted for the new premium dark aesthetic */
 @utility glass {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(26, 26, 26, 0.85);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 @utility glass-dark {
-  background: rgba(15, 23, 42, 0.7);
+  background: rgba(14, 14, 14, 0.9);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
+
+/* Section styling helpers */
+.section-offwhite {
+  background-color: #F5F1EA !important;
+  color: #0E0E0E !important;
+}
+
+.section-dark {
+  background-color: #0E0E0E !important;
+  color: #F5F1EA !important;
+}
+
