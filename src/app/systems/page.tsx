@@ -21,6 +21,15 @@ export default function SystemsPage() {
       
       {/* Hero Section */}
       <section className="pt-12 px-6 md:px-12 max-w-7xl mx-auto w-full flex flex-col items-center text-center">
+        <motion.p
+          initial="hidden"
+          animate="visible"
+          variants={FADE_UP}
+          className="text-xs md:text-sm font-bold uppercase tracking-widest text-[var(--color-brand-blue)] mb-4"
+        >
+          What do you want to achieve?
+        </motion.p>
+
         <motion.h1 
           initial="hidden" animate="visible" variants={FADE_UP}
           className="text-5xl md:text-7xl font-bold font-heading leading-[1.05] tracking-tight max-w-4xl"
@@ -36,18 +45,9 @@ export default function SystemsPage() {
         </motion.p>
 
         <motion.div 
-          initial="hidden" animate="visible" variants={FADE_UP} transition={{ delay: 0.2 }}
-          className="mt-8 z-10"
-        >
-          <Button size="lg" className="rounded-full shadow-lg">
-            What do you want to achieve ?
-          </Button>
-        </motion.div>
-
-        <motion.div 
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1, transition: { delay: 0.3, duration: 0.8 } }}
-          className="mt-[-2rem] w-full max-w-5xl rounded-3xl overflow-hidden relative aspect-[21/9]"
+          className="mt-8 md:mt-12 w-full max-w-5xl rounded-3xl overflow-hidden relative aspect-[16/10] md:aspect-[21/9]"
         >
           <Image 
             src="/book.png" 

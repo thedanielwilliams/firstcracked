@@ -23,10 +23,18 @@ export function Header() {
   }, [pathname])
 
   return (
-    <header className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none">
-      <div className="flex items-center gap-2 pointer-events-auto">
-        {/* Desktop Navigation Pill */}
-        <nav className="hidden md:flex items-center bg-white/90 backdrop-blur-md rounded-full shadow-sm p-1.5 border border-black/5">
+    <header className="fixed top-6 left-0 right-0 z-50 px-4 pointer-events-none flex justify-center">
+      <div className="w-full max-w-5xl bg-white/90 backdrop-blur-md rounded-full shadow-lg border border-black/5 p-2 flex items-center justify-between pointer-events-auto">
+        {/* Brand/Logo */}
+        <Link href="/" className="flex items-center gap-2 font-heading font-bold text-lg tracking-tight pl-4 hover:opacity-90 transition-opacity">
+          <div className="w-5 h-5 bg-[var(--color-brand-blue)] rounded-sm flex items-center justify-center">
+            <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
+          </div>
+          <span className="text-[var(--color-brand-dark)]">First Cracked</span>
+        </Link>
+
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex items-center gap-1">
           {links.map((link) => {
             const isActive = pathname === link.href
             return (
@@ -49,32 +57,28 @@ export function Header() {
           })}
         </nav>
 
-        {/* Let's Talk Button - Desktop */}
-        <div className="hidden md:block">
-          <Button asChild variant="yellow" className="h-[44px] px-6">
+        {/* Action Buttons */}
+        <div className="flex items-center gap-2 pr-1">
+          {/* Let's Talk Button */}
+          <Button asChild variant="yellow" className="h-[40px] px-5 text-sm">
             <Link href="/contact">Let's Talk</Link>
           </Button>
-        </div>
 
-        {/* Mobile Header elements */}
-        <div className="flex md:hidden items-center gap-2">
-          <Button asChild variant="yellow" className="h-[44px] px-6 w-[200px] shadow-lg">
-            <Link href="/contact" className="truncate">Let's Talk</Link>
-          </Button>
+          {/* Mobile Menu Toggle Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="flex items-center justify-center w-[44px] h-[44px] bg-white rounded-full shadow-lg border border-black/5"
+            className="flex md:hidden items-center justify-center w-[40px] h-[40px] bg-[var(--color-brand-gray)] text-[var(--color-brand-dark)] rounded-full hover:bg-black/5 transition-colors border border-black/5"
             aria-label="Toggle menu"
           >
-            {isOpen ? <X size={20} /> : <Menu size={20} />}
+            {isOpen ? <X size={18} /> : <Menu size={18} />}
           </button>
         </div>
       </div>
 
       {/* Mobile Menu Overlay */}
       {isOpen && (
-        <div className="fixed inset-0 top-[80px] bg-[var(--background)] z-40 p-6 flex flex-col pointer-events-auto md:hidden">
-          <nav className="flex flex-col gap-4 text-2xl font-bold font-heading">
+        <div className="fixed inset-x-4 top-[90px] bg-white/95 backdrop-blur-md rounded-3xl shadow-xl border border-black/5 z-40 p-6 flex flex-col pointer-events-auto md:hidden animate-in fade-in slide-in-from-top-4 duration-200">
+          <nav className="flex flex-col gap-4 text-xl font-bold font-heading">
             {links.map((link) => (
               <Link
                 key={link.href}
