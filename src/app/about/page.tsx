@@ -53,9 +53,9 @@ export default function AboutPage() {
         </motion.div>
       </section>
 
-      {/* Founder Story & Photo */}
+      {/* Founder Story */}
       <section className="px-6 md:px-12 max-w-7xl mx-auto w-full">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        <div className="max-w-4xl mx-auto">
           
           {/* Founder Story (Step 19 - 200 words) */}
           <motion.div 
@@ -82,36 +82,6 @@ export default function AboutPage() {
             </div>
           </motion.div>
 
-          {/* Founder Photo Placeholder with Burnt Orange glow (Step 19) */}
-          <motion.div 
-            initial="hidden" whileInView="visible" viewport={{ once: true }} variants={FADE_UP}
-            className="bg-[var(--color-brand-gray)] border border-white/10 rounded-3xl p-8 flex flex-col justify-between h-[450px] relative overflow-hidden group shadow-2xl"
-          >
-            {/* Visual background duotone details */}
-            <div className="absolute inset-0 bg-[var(--color-brand-accent)]/5 mix-blend-color z-10 pointer-events-none"></div>
-            <div className="absolute -bottom-10 -right-10 w-48 h-48 bg-[var(--color-brand-accent)]/20 rounded-full blur-3xl group-hover:bg-[var(--color-brand-accent)]/30 transition-all duration-700"></div>
-
-            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[var(--color-brand-accent)] z-10">
-              <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-brand-accent)]"></span>
-              Founder
-            </div>
-
-            <div className="w-full flex justify-center py-6 relative z-10">
-              <svg className="w-48 h-48 text-[var(--color-brand-accent)]" viewBox="0 0 100 100" fill="none">
-                {/* Premium stylized outline bust of founder */}
-                <circle cx="50" cy="35" r="16" stroke="currentColor" strokeWidth="2" />
-                <path d="M22 80 C22 60, 32 58, 50 58 C68 58, 78 60, 78 80" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                {/* Split line */}
-                <path d="M50 15 L50 85" stroke="#F5F1EA" strokeWidth="1.5" strokeDasharray="3 3" />
-              </svg>
-            </div>
-
-            <div className="relative z-10">
-              <h4 className="text-2xl font-bold font-heading text-[var(--color-brand-offwhite)]">Daniel Williams</h4>
-              <p className="text-sm text-[var(--color-brand-gray-dark)]">Founder & Strategy Director</p>
-            </div>
-          </motion.div>
-
         </div>
       </section>
 
@@ -125,9 +95,9 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
             {
-              name: "Daniel Williams",
+              name: "Zahra Williams",
               role: "Founder & Strategy Lead",
-              initials: "DW",
+              initials: "ZW",
               desc: "Former growth marketer focused on architecting embedded marketing teams and business playbooks."
             },
             {

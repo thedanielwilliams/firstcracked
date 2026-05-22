@@ -74,7 +74,7 @@ export default function LabsPage() {
         
         <motion.div 
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={STAGGER}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6"
         >
           {/* Desk Image - Grayscale and Orange graded */}
           <motion.div variants={FADE_UP} className="rounded-3xl overflow-hidden relative h-[300px] md:h-auto md:aspect-square border border-white/10 group">
@@ -86,31 +86,6 @@ export default function LabsPage() {
             <h3 className="text-2xl md:text-3xl font-heading font-bold leading-tight text-[var(--color-brand-offwhite)]">
               We become your marketing team. Embedded, accountable, and focused purely on revenue-generating activities.
             </h3>
-          </motion.div>
-
-          {/* Step 17: Replace scrabble tiles with cracked safe vector */}
-          <motion.div variants={FADE_UP} className="bg-[var(--color-brand-gray)] border border-white/5 rounded-3xl p-8 flex flex-col justify-between h-[300px] md:h-auto md:aspect-square relative overflow-hidden group">
-            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[var(--color-brand-accent)]">
-              <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-brand-accent)]"></span>
-              Cracked Safe Metaphor
-            </div>
-            
-            <div className="w-full h-36 flex items-center justify-center">
-              <svg className="w-32 h-32 text-[var(--color-brand-accent)] transition-transform duration-500 group-hover:scale-105" viewBox="0 0 100 100" fill="none">
-                {/* Safe outline */}
-                <rect x="25" y="20" width="50" height="60" rx="6" stroke="currentColor" strokeWidth="2" />
-                <circle cx="50" cy="50" r="14" stroke="currentColor" strokeWidth="2" />
-                {/* Safe crack lines */}
-                <path d="M25 40 L40 45 L35 55 L50 50" stroke="currentColor" strokeWidth="2" />
-                {/* Beams of light shining out */}
-                <line x1="50" y1="50" x2="10" y2="10" stroke="#F5F1EA" strokeWidth="1.5" strokeDasharray="3 3" />
-                <line x1="50" y1="50" x2="90" y2="10" stroke="#F5F1EA" strokeWidth="1.5" strokeDasharray="3 3" />
-                <line x1="50" y1="50" x2="90" y2="90" stroke="#F5F1EA" strokeWidth="1.5" strokeDasharray="3 3" />
-                <line x1="50" y1="50" x2="10" y2="90" stroke="#F5F1EA" strokeWidth="1.5" strokeDasharray="3 3" />
-              </svg>
-            </div>
-
-            <p className="text-xs text-[var(--color-brand-gray-dark)] leading-tight">Embedding and unlocking value inside structural safes.</p>
           </motion.div>
         </motion.div>
       </section>

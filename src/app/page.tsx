@@ -430,54 +430,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Case Studies Section */}
-      <section className="px-6 md:px-12 max-w-7xl mx-auto w-full">
-        <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-[var(--color-brand-accent)] mb-12">
-          <span className="w-2 h-2 rounded-full bg-[var(--color-brand-accent)]"></span>
-          Case Studies
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {[
-            {
-              type: "DTC Skincare Brand, Series A",
-              challenge: "Outgrown traditional agencies with zero strategic direction.",
-              solution: "Deployed an embedded full-stack team running high-frequency creative loops and automated email flows.",
-              result: "+312% MRR in 90 days",
-              slug: "skincare"
-            },
-            {
-              type: "SaaS Analytics Platform",
-              challenge: "High onboarding drop-offs and poor trial conversion rates.",
-              solution: "Rebuilt onboarding flows, refined key in-app copy, and implemented an accountable email strategy.",
-              result: "+45% LTV Increase",
-              slug: "saas"
-            },
-            {
-              type: "Creator Education Brand",
-              challenge: "High traffic, but extremely low organic checkout conversion.",
-              solution: "Engineered a high-ticket conversion funnel and streamlined modern sales playbooks.",
-              result: "$250k Launch Week",
-              slug: "creator"
-            }
-          ].map((cs, idx) => (
-            <div key={idx} className="bg-[var(--color-brand-gray)] border border-white/5 rounded-3xl p-8 flex flex-col justify-between hover:border-[var(--color-brand-accent)]/30 transition-all duration-300 group">
-              <div>
-                <span className="text-xs uppercase tracking-widest text-[var(--color-brand-accent)] font-bold mb-4 block">{cs.type}</span>
-                <p className="text-[var(--color-brand-gray-dark)] text-sm mb-2"><strong className="text-[var(--color-brand-offwhite)]">Challenge:</strong> {cs.challenge}</p>
-                <p className="text-[var(--color-brand-gray-dark)] text-sm mb-6"><strong className="text-[var(--color-brand-offwhite)]">Solution:</strong> {cs.solution}</p>
-              </div>
-              <div>
-                <div className="text-2xl md:text-3xl font-heading font-bold text-[var(--color-brand-accent)] mb-4">{cs.result}</div>
-                <Link href={`/work/${cs.slug}`} className="text-sm font-bold text-[var(--color-brand-offwhite)] hover:text-[var(--color-brand-accent)] transition-colors flex items-center gap-1">
-                  View Case Study
-                  <span className="transform translate-x-0 group-hover:translate-x-1 transition-transform">→</span>
-                </Link>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
 
       {/* Pre-Footer CTA */}
       <section className="px-6 md:px-12 max-w-7xl mx-auto w-full mb-12">
