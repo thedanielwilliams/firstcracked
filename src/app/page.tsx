@@ -91,9 +91,9 @@ export default function Home() {
           Happy Clients
         </div>
 
-        {/* 6 Greyscale client logo placeholders */}
-        <div className="grid grid-cols-2 md:grid-cols-6 gap-8 items-center justify-items-center opacity-65 mb-16 py-8 border-y border-white/5">
-          {["AlphaCo", "SaaSify", "DTC Lab", "Summit", "ScaleOps", "Apex"].map((logoName, i) => (
+        {/* 4 Greyscale client logo placeholders */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center opacity-65 mb-16 py-8 border-y border-white/5">
+          {["Lemonmarkets", "64sqrs", "Nimbus", "Verisult"].map((logoName, i) => (
             <div key={i} className="flex items-center gap-2 text-[var(--color-brand-gray-dark)] hover:text-white transition-colors duration-300 font-heading font-bold text-lg grayscale">
               <svg className="w-6 h-6 text-[var(--color-brand-accent)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
@@ -115,7 +115,7 @@ export default function Home() {
               </div>
               <div>
                 <h4 className="font-bold text-[var(--color-brand-offwhite)]">John Doe</h4>
-                <p className="text-sm text-[var(--color-brand-gray-dark)]">VP Growth, SaaSify</p>
+                <p className="text-sm text-[var(--color-brand-gray-dark)]">VP Growth, Lemonmarkets</p>
               </div>
             </div>
           </div>
@@ -130,7 +130,7 @@ export default function Home() {
               </div>
               <div>
                 <h4 className="font-bold text-[var(--color-brand-offwhite)]">Sarah Jenkins</h4>
-                <p className="text-sm text-[var(--color-brand-gray-dark)]">Founder, DTC Lab</p>
+                <p className="text-sm text-[var(--color-brand-gray-dark)]">Founder, Nimbus</p>
               </div>
             </div>
           </div>
