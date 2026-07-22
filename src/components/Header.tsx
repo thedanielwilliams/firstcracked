@@ -9,9 +9,10 @@ import { Button } from "./ui/button"
 
 const links = [
   { href: "/", label: "Home" },
+  { href: "/services", label: "Services" },
+  { href: "/micro-offers", label: "Micro-Offers" },
+  { href: "/teardowns", label: "Teardowns" },
   { href: "/about", label: "About" },
-  { href: "/labs", label: "Labs" },
-  { href: "/systems", label: "Systems" },
 ]
 
 export function Header() {
@@ -61,9 +62,9 @@ export function Header() {
 
         {/* Action Buttons */}
         <div className="flex items-center gap-2 pr-1">
-          {/* Let's Talk Button */}
+          {/* Book a Free Audit Button */}
           <Button asChild className="h-[40px] px-5 text-sm bg-[#FF4A1C] text-white hover:bg-[#E03E15] rounded-full font-bold shadow-lg">
-            <Link href="/contact">Let's Talk</Link>
+            <Link href="/contact">Book a free audit</Link>
           </Button>
 
           {/* Mobile Menu Toggle Button */}

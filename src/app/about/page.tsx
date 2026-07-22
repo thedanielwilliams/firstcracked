@@ -9,14 +9,9 @@ const FADE_UP: Variants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
 }
 
-const STAGGER: Variants = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { staggerChildren: 0.1 } }
-}
-
 export default function AboutPage() {
   return (
-    <div className="flex flex-col gap-32 overflow-x-hidden section-dark pt-16">
+    <div className="flex flex-col gap-24 overflow-x-hidden section-dark pt-16">
       
       {/* Hero Section */}
       <section className="px-6 md:px-12 max-w-7xl mx-auto w-full flex flex-col items-center text-center">
@@ -33,12 +28,11 @@ export default function AboutPage() {
           initial="hidden"
           animate="visible"
           variants={FADE_UP}
-          className="text-5xl md:text-7xl font-bold font-heading leading-[1.05] tracking-tight max-w-4xl text-[var(--color-brand-offwhite)]"
+          className="text-4xl md:text-7xl font-bold font-heading leading-[1.05] tracking-tight max-w-4xl text-[var(--color-brand-offwhite)]"
         >
-          Built on pure execution.
+          Email specialists. No fluff, no middle management.
         </motion.h1>
 
-        {/* Strong POV Statement (Step 19) */}
         <motion.div 
           initial="hidden"
           animate="visible"
@@ -48,87 +42,78 @@ export default function AboutPage() {
         >
           <div className="absolute top-0 right-0 w-24 h-24 bg-[var(--color-brand-accent)]/10 rounded-full blur-2xl"></div>
           <p className="text-2xl md:text-3xl font-heading font-bold text-[var(--color-brand-offwhite)] leading-snug">
-            "We believe most agencies sell hours. We sell outcomes."
+            "The two people you hire are the two people doing the work."
           </p>
         </motion.div>
       </section>
 
-      {/* Founder Story */}
-      <section className="px-6 md:px-12 max-w-7xl mx-auto w-full">
-        <div className="max-w-4xl mx-auto">
+      {/* Story */}
+      <section className="px-6 md:px-12 max-w-5xl mx-auto w-full">
+        <div className="bg-[var(--color-brand-gray)] border border-white/5 rounded-3xl p-8 md:p-14 space-y-6">
+          <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-[var(--color-brand-accent)]">
+            <span className="w-2 h-2 rounded-full bg-[var(--color-brand-accent)]"></span>
+            About First Cracked
+          </div>
           
-          {/* Founder Story (Step 19 - 200 words) */}
-          <motion.div 
-            initial="hidden" whileInView="visible" viewport={{ once: true }} variants={FADE_UP}
-            className="flex flex-col justify-center"
-          >
-            <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-[var(--color-brand-accent)] mb-6">
-              <span className="w-2 h-2 rounded-full bg-[var(--color-brand-accent)]"></span>
-              Our Story
-            </div>
-            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6 text-[var(--color-brand-offwhite)]">
-              Why we started First Cracked
-            </h2>
-            <div className="text-lg text-[var(--color-brand-gray-dark)] space-y-6 leading-relaxed">
-              <p>
-                First Cracked was founded to eliminate the friction between strategy and tangible business growth. In standard agency models, clients are handed beautiful decks, but left to handle execution on their own, resulting in delayed launches and missed opportunities. We wanted to build something different.
-              </p>
-              <p>
-                We believe that premium brands deserve embedded marketing teams that act like partners, not service vendors. By combining senior strategists, copywriters, and performance marketers under one roof, we embed ourselves directly into your organization, operating with high velocity and total transparency.
-              </p>
-              <p>
-                Whether building automated email ecosystems or formulating high-ticket sales playbooks, we are focused purely on revenue-generating actions. We don't hide behind vanity metrics or count hours; we scale outcomes.
-              </p>
-            </div>
-          </motion.div>
-
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-[var(--color-brand-offwhite)]">
+            DTC Email Marketing Specialists
+          </h2>
+          
+          <div className="text-lg text-[var(--color-brand-gray-dark)] space-y-6 leading-relaxed">
+            <p>
+              First Cracked is Zahra and Daniel — two email specialists with around four years each running email across Klaviyo, Shopify, ConvertKit and Mailchimp.
+            </p>
+            <p>
+              We've seen too many DTC brands hand off their email to generalist agencies where account managers pass requests down to junior interns. The result? Generic blasts, broken flows, and money left on the table.
+            </p>
+            <p>
+              No account managers, no juniors. When you work with First Cracked, Zahra and Daniel build your flows, write your campaigns, segment your list, and optimize your deliverability directly.
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* 3-Person Team Grid (Step 19) */}
-      <section className="px-6 md:px-12 max-w-7xl mx-auto w-full py-12 border-t border-white/5">
-        <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-[var(--color-brand-accent)] mb-12">
+      {/* 2-Person Specialist Grid */}
+      <section className="px-6 md:px-12 max-w-7xl mx-auto w-full">
+        <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-[var(--color-brand-accent)] mb-12 justify-center">
           <span className="w-2 h-2 rounded-full bg-[var(--color-brand-accent)]"></span>
-          The Operators
+          Meet the Specialists
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {[
-            {
-              name: "Zahra Williams",
-              role: "Founder & Strategy Lead",
-              initials: "ZW",
-              desc: "Former growth marketer focused on architecting embedded marketing teams and business playbooks."
-            },
-            {
-              name: "Alex Chen",
-              role: "Creative Director",
-              initials: "AC",
-              desc: "Ensures visual and design execution stands out on premium aesthetics across every touchpoint."
-            },
-            {
-              name: "Marcus Vance",
-              role: "Operations Lead",
-              initials: "MV",
-              desc: "Manages timelines, sprint deliverables, and analytics accountability to ensure target completions."
-            }
-          ].map((member, idx) => (
-            <div key={idx} className="bg-[var(--color-brand-gray)] border border-white/5 rounded-3xl p-8 flex flex-col justify-between h-[360px] hover:border-[var(--color-brand-accent)]/30 transition-colors duration-300">
-              <div className="flex justify-between items-start">
-                {/* Team avatar vector */}
-                <div className="w-16 h-16 rounded-full bg-[var(--color-brand-accent)]/10 border border-[var(--color-brand-accent)]/30 flex items-center justify-center font-heading font-bold text-[var(--color-brand-accent)] text-xl">
-                  {member.initials}
-                </div>
-                <span className="text-xs uppercase tracking-widest text-[var(--color-brand-gray-dark)] font-bold">Cracked Team</span>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="bg-[var(--color-brand-gray)] border border-white/5 rounded-3xl p-8 flex flex-col justify-between h-[320px]">
+            <div className="flex justify-between items-start">
+              <div className="w-16 h-16 rounded-full bg-[var(--color-brand-accent)]/15 border border-[var(--color-brand-accent)]/40 flex items-center justify-center font-heading font-bold text-[var(--color-brand-accent)] text-xl">
+                Z
               </div>
-              
-              <div>
-                <h4 className="text-2xl font-bold font-heading text-[var(--color-brand-offwhite)] mb-1">{member.name}</h4>
-                <span className="text-xs font-bold uppercase tracking-wider text-[var(--color-brand-accent)] mb-4 block">{member.role}</span>
-                <p className="text-sm text-[var(--color-brand-gray-dark)] leading-relaxed">{member.desc}</p>
-              </div>
+              <span className="text-xs uppercase tracking-widest text-[var(--color-brand-accent)] font-bold">Email Specialist</span>
             </div>
-          ))}
+            
+            <div>
+              <h4 className="text-2xl font-bold font-heading text-[var(--color-brand-offwhite)] mb-1">Zahra</h4>
+              <span className="text-xs font-semibold text-[var(--color-brand-gray-dark)] mb-3 block">Klaviyo, Shopify & Email Strategy</span>
+              <p className="text-sm text-[var(--color-brand-gray-dark)] leading-relaxed">
+                4+ years architecting high-converting automated sequences, segmenting customer lifecycle cohorts, and auditing deliverability.
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-[var(--color-brand-gray)] border border-white/5 rounded-3xl p-8 flex flex-col justify-between h-[320px]">
+            <div className="flex justify-between items-start">
+              <div className="w-16 h-16 rounded-full bg-[var(--color-brand-accent)]/15 border border-[var(--color-brand-accent)]/40 flex items-center justify-center font-heading font-bold text-[var(--color-brand-accent)] text-xl">
+                D
+              </div>
+              <span className="text-xs uppercase tracking-widest text-[var(--color-brand-accent)] font-bold">Email Specialist</span>
+            </div>
+            
+            <div>
+              <h4 className="text-2xl font-bold font-heading text-[var(--color-brand-offwhite)] mb-1">Daniel</h4>
+              <span className="text-xs font-semibold text-[var(--color-brand-gray-dark)] mb-3 block">Campaign Copywriting & Flow Optimization</span>
+              <p className="text-sm text-[var(--color-brand-gray-dark)] leading-relaxed">
+                4+ years crafting campaign rhythms, writing persuasive DTC copy, and testing email mechanics that convert list subscribers into buyers.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -136,18 +121,13 @@ export default function AboutPage() {
       <section className="px-6 md:px-12 max-w-7xl mx-auto w-full mb-12">
         <motion.div 
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={FADE_UP}
-          className="bg-[var(--color-brand-accent)] text-white rounded-3xl p-12 md:p-24 flex flex-col items-center text-center relative overflow-hidden"
+          className="bg-[var(--color-brand-accent)] text-white rounded-3xl p-12 md:p-20 flex flex-col items-center text-center relative overflow-hidden"
         >
-          <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white to-transparent mix-blend-overlay"></div>
-          
-          <h2 className="text-4xl md:text-6xl font-bold font-heading mb-6 max-w-3xl relative z-10 text-white leading-tight">
-            Ready to partner with real operators?
+          <h2 className="text-3xl md:text-5xl font-bold font-heading mb-6 max-w-3xl relative z-10 text-white leading-tight">
+            Find out exactly where your email is losing money.
           </h2>
-          <p className="text-lg md:text-xl text-white/80 max-w-2xl mb-10 relative z-10 font-sans">
-            Let's discuss how we can embed with your brand to unlock growth.
-          </p>
-          <Button size="lg" asChild className="relative z-10 bg-white text-[var(--color-brand-dark)] hover:bg-[var(--color-brand-offwhite)] font-bold">
-            <Link href="/contact">Book your call →</Link>
+          <Button size="lg" asChild className="relative z-10 bg-white text-[#0E0E0E] hover:bg-slate-100 font-bold rounded-full px-8">
+            <Link href="/contact">Book a free audit →</Link>
           </Button>
         </motion.div>
       </section>

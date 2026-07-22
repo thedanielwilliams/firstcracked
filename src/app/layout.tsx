@@ -17,21 +17,13 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
-  title: "First Cracked Studio | Embedded Marketing Teams & Growth Playbooks",
-  description: "Embedded marketing teams and growth playbooks for ambitious brands. Retainer or one-time engagement. Book a call.",
+  title: "First Cracked | DTC Email Marketing Studio for Klaviyo",
+  description: "First Cracked builds and optimises Klaviyo flows and campaigns that turn DTC subscribers into repeat buyers so email pulls its weight.",
   openGraph: {
-    title: "First Cracked Studio | Embedded Marketing Teams & Growth Playbooks",
-    description: "Embedded marketing teams and growth playbooks for ambitious brands. Retainer or one-time engagement. Book a call.",
+    title: "First Cracked | DTC Email Marketing Studio",
+    description: "Email marketing engineered for revenue. We build and optimise Klaviyo flows and campaigns for DTC brands.",
     url: "https://firstcrackedteam.com",
     siteName: "First Cracked Studio",
-    images: [
-      {
-        url: "https://firstcrackedteam.com/og-image.png", // [REPLACE] placeholder
-        width: 1200,
-        height: 630,
-        alt: "First Cracked - Marketing engineered to breakthrough",
-      },
-    ],
     locale: "en_US",
     type: "website",
   },
@@ -47,12 +39,7 @@ export default function RootLayout({
     "@type": "Organization",
     "name": "First Cracked Studio",
     "url": "https://firstcrackedteam.com",
-    "logo": "https://firstcrackedteam.com/logo.png", // [REPLACE] placeholder
-    "description": "Embedded marketing teams and growth playbooks for ambitious brands. Retainer or one-time engagement. Book a call.",
-    "sameAs": [
-      "https://x.com/firstcracked",
-      "https://www.linkedin.com/company/firstcracked"
-    ]
+    "description": "First Cracked builds and optimises Klaviyo flows and campaigns that turn DTC subscribers into repeat buyers."
   };
 
   return (
@@ -69,10 +56,10 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-[var(--background)] text-[var(--foreground)]">
         <Header />
         
-        {/* Sticky Scroll CTA - Floating Book Call */}
+        {/* Sticky Scroll CTA - Floating Book Free Audit */}
         <div className="fixed bottom-6 right-6 md:top-28 md:bottom-auto md:right-8 z-40">
-          <Button asChild variant="yellow" className="h-[44px] px-6 shadow-2xl border border-black/10 rounded-full font-bold">
-            <a href="/contact">Book a call</a>
+          <Button asChild variant="yellow" className="h-[44px] px-6 shadow-2xl border border-black/10 rounded-full font-bold bg-[#FF4A1C] text-white hover:bg-[#E03E15]">
+            <a href="/contact">Book a free audit</a>
           </Button>
         </div>
 
