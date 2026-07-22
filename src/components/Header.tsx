@@ -62,8 +62,8 @@ export function Header() {
 
         {/* Action Buttons */}
         <div className="flex items-center gap-2 pr-1">
-          {/* Book a Free Audit Button */}
-          <Button asChild className="h-[40px] px-5 text-sm bg-[#FF4A1C] text-white hover:bg-[#E03E15] rounded-full font-bold shadow-lg">
+          {/* Book a Free Audit Button (Desktop only) */}
+          <Button asChild className="hidden md:inline-flex h-[40px] px-5 text-sm bg-[#FF4A1C] text-white hover:bg-[#E03E15] rounded-full font-bold shadow-lg">
             <Link href="/contact">Book a free audit</Link>
           </Button>
 
@@ -81,7 +81,7 @@ export function Header() {
       {/* Mobile Menu Overlay */}
       {isOpen && (
         <div className="fixed inset-x-4 top-[90px] bg-[#1A1A1A]/95 backdrop-blur-md rounded-3xl shadow-2xl border border-white/5 z-40 p-6 flex flex-col pointer-events-auto md:hidden animate-in fade-in slide-in-from-top-4 duration-200">
-          <nav className="flex flex-col gap-4 text-xl font-bold font-heading">
+          <nav className="flex flex-col gap-4 text-xl font-bold font-heading mb-6">
             {links.map((link) => (
               <Link
                 key={link.href}
@@ -93,15 +93,11 @@ export function Header() {
                 {link.label}
               </Link>
             ))}
-            <Link
-              href="/contact"
-              className={`py-2 transition-colors ${
-                pathname === "/contact" ? "text-[var(--color-brand-accent)]" : "text-[var(--color-brand-offwhite)]"
-              }`}
-            >
-              Contact
-            </Link>
           </nav>
+
+          <Button asChild className="w-full h-12 bg-[#FF4A1C] text-white hover:bg-[#E03E15] rounded-full font-bold text-base shadow-lg">
+            <Link href="/contact">Book a free audit</Link>
+          </Button>
         </div>
       )}
     </header>
