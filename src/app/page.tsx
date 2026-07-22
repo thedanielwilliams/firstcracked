@@ -69,16 +69,7 @@ export default function Home() {
           </svg>
         </div>
 
-        {/* Sub-badge / Pill */}
-        <motion.div 
-          initial="hidden"
-          animate="visible"
-          variants={FADE_UP}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs md:text-sm font-medium text-[var(--color-brand-offwhite)] mb-6"
-        >
-          <span className="w-2 h-2 rounded-full bg-[var(--color-brand-accent)] animate-pulse"></span>
-          Specialists working like an in-house team, without the in-house cost.
-        </motion.div>
+
 
         <motion.h1 
           initial="hidden"

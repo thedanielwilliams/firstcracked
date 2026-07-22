@@ -56,12 +56,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-[var(--background)] text-[var(--foreground)]">
         <Header />
         
-        {/* Sticky Scroll CTA - Floating Book Free Audit */}
-        <div className="fixed bottom-6 right-6 md:top-28 md:bottom-auto md:right-8 z-40">
-          <Button asChild variant="yellow" className="h-[44px] px-6 shadow-2xl border border-black/10 rounded-full font-bold bg-[#FF4A1C] text-white hover:bg-[#E03E15]">
-            <a href="/contact">Book a free audit</a>
-          </Button>
-        </div>
+
 
         <main className="flex-1 pt-24 pb-12">
           {children}
