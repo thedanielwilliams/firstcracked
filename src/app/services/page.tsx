@@ -9,7 +9,7 @@ export default function ServicesPage() {
       title: "Free Audit", 
       for: "See where email is losing you money", 
       price: "Free", 
-      desc: "We review your flows, campaigns and deliverability and show you the biggest gaps — with zero obligation.",
+      desc: "We review your flows, campaigns and deliverability and show you the biggest gaps with zero obligation.",
       cta: "Book a free audit"
     },
     { 

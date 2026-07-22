@@ -15,7 +15,7 @@ export function Footer() {
             First Cracked
           </Link>
           <p className="text-black/80 font-medium text-base leading-relaxed">
-            First Cracked — email marketing for DTC brands that want their list to earn.
+            First Cracked: email marketing for DTC brands that want their list to earn.
           </p>
           <p className="text-xs md:text-sm text-black/50 font-medium pt-4">
             © 2026 First Cracked. All rights reserved.

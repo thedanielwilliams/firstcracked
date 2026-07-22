@@ -61,7 +61,7 @@ export default function AboutPage() {
           
           <div className="text-lg text-[var(--color-brand-gray-dark)] space-y-6 leading-relaxed">
             <p>
-              First Cracked is Zahra and Daniel — two email specialists with around four years each running email across Klaviyo, Shopify, ConvertKit and Mailchimp.
+              First Cracked is Zahra and Daniel, two email specialists with around four years each running email across Klaviyo, Shopify, ConvertKit and Mailchimp.
             </p>
             <p>
               We've seen too many DTC brands hand off their email to generalist agencies where account managers pass requests down to junior interns. The result? Generic blasts, broken flows, and money left on the table.

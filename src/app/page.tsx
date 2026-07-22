@@ -25,7 +25,7 @@ export default function Home() {
       a: "Klaviyo and Shopify mainly, plus ConvertKit and Mailchimp."
     },
     {
-      q: "We're a smaller brand — is this for us?",
+      q: "We're a smaller brand: is this for us?",
       a: "If you're on Shopify with a growing list, yes. The audit will tell us honestly."
     },
     {
@@ -34,7 +34,7 @@ export default function Home() {
     },
     {
       q: "Do you guarantee a number?",
-      a: "No — and be wary of anyone who does. We guarantee the work, done well, and realistic targets we agree upfront."
+      a: "No, and be wary of anyone who does. We guarantee the work, done well, and realistic targets we agree upfront."
     }
   ]
 
@@ -179,7 +179,7 @@ export default function Home() {
                 Build the flows that sell on autopilot
               </h3>
               <p className="text-[var(--color-brand-gray-dark)] leading-relaxed text-sm">
-                Welcome, abandoned cart, browse abandonment, post-purchase, win-back — the automated sequences that recover revenue while you sleep.
+                Welcome, abandoned cart, browse abandonment, post-purchase, win-back: the automated sequences that recover revenue while you sleep.
               </p>
             </div>
           </motion.div>
@@ -226,13 +226,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Proof — See How We Think Section with Image */}
+      {/* Proof: See How We Think Section with Image */}
       <section className="px-6 md:px-12 max-w-7xl mx-auto w-full">
         <div className="bg-[var(--color-brand-gray)] border border-white/5 rounded-3xl p-8 md:p-14 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7 space-y-6">
             <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-[var(--color-brand-accent)]">
               <span className="w-2 h-2 rounded-full bg-[var(--color-brand-accent)]"></span>
-              Proof — see how we think
+              Proof: see how we think
             </div>
             <h2 className="text-3xl md:text-5xl font-heading font-bold text-[var(--color-brand-offwhite)] leading-tight">
               We're a young studio, so we'll show you rather than tell you.
@@ -248,7 +248,7 @@ export default function Home() {
             </div>
 
             <p className="pt-4 text-xs text-[var(--color-brand-gray-dark)] leading-relaxed border-t border-white/10">
-              Behind the scenes, the email work we've run for brands has performed well — strong open and click-through, and sequences that pulled their weight in real launches. We keep client specifics private, but we're happy to talk you through what we did on a call.
+              Behind the scenes, the email work we've run for brands has performed well with strong open and click-through, and sequences that pulled their weight in real launches. We keep client specifics private, but we're happy to talk you through what we did on a call.
             </p>
           </div>
 
@@ -281,7 +281,7 @@ export default function Home() {
               <span className="text-4xl font-heading font-bold text-[var(--color-brand-accent)] block mb-4">1</span>
               <h3 className="text-xl font-bold font-heading mb-3 text-[var(--color-brand-offwhite)]">Start with a free audit</h3>
               <p className="text-sm text-[var(--color-brand-gray-dark)] leading-relaxed">
-                We review your flows, campaigns and deliverability and show you the biggest gaps — no obligation.
+                We review your flows, campaigns and deliverability and show you the biggest gaps with no obligation.
               </p>
             </div>
           </div>
@@ -463,7 +463,7 @@ export default function Home() {
           <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white to-transparent mix-blend-overlay"></div>
           
           <h2 className="text-3xl md:text-5xl font-bold font-heading mb-6 max-w-3xl relative z-10 text-white leading-tight">
-            Find out exactly where your email is losing money — in under a week.
+            Find out exactly where your email is losing money in under a week.
           </h2>
           
           <Button size="lg" asChild className="relative z-10 bg-white text-[#0E0E0E] hover:bg-slate-100 font-bold h-14 px-10 text-base rounded-full shadow-lg">

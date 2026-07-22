@@ -69,7 +69,7 @@ export default function LabsPage() {
         
         {/* Step 11: Added rich narrative body copy below the header */}
         <p className="text-xl md:text-2xl text-[var(--color-brand-gray-dark)] max-w-4xl leading-relaxed mb-12">
-          Cracked Labs replaces your in-house marketing team. We embed senior operators — strategists, designers, copywriters, media buyers — who own your growth as if it were ours.
+          Cracked Labs replaces your in-house marketing team. We embed senior operators (strategists, designers, copywriters, media buyers) who own your growth as if it were ours.
         </p>
         
         <motion.div 

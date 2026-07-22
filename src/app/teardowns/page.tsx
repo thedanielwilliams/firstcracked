@@ -33,7 +33,7 @@ export default function TeardownsPage() {
       <div className="text-center max-w-3xl mx-auto space-y-4">
         <div className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-[var(--color-brand-accent)]">
           <span className="w-2 h-2 rounded-full bg-[var(--color-brand-accent)]"></span>
-          Teardowns — see how we think
+          Teardowns: see how we think
         </div>
         <h1 className="text-4xl md:text-6xl font-heading font-bold text-[var(--color-brand-offwhite)]">
           Real DTC emails, broken down.
@@ -67,7 +67,7 @@ export default function TeardownsPage() {
       <div className="bg-[var(--color-brand-accent)] text-white rounded-3xl p-10 md:p-14 text-center space-y-6">
         <h2 className="text-3xl md:text-4xl font-heading font-bold">Want us to tear down your email flows next?</h2>
         <p className="text-base md:text-lg text-white/90 max-w-2xl mx-auto">
-          Book a free audit. We review your flows, campaigns and deliverability and show you the biggest gaps — no obligation.
+          Book a free audit. We review your flows, campaigns and deliverability and show you the biggest gaps with no obligation.
         </p>
         <Button asChild size="lg" className="bg-white text-[#0E0E0E] hover:bg-slate-100 font-bold rounded-full px-8">
           <Link href="/contact">Book a free audit</Link>

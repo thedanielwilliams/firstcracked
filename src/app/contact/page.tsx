@@ -45,7 +45,7 @@ export default function ContactPage() {
             Book a free email audit
           </h1>
           <p className="text-lg md:text-xl text-[var(--color-brand-gray-dark)] leading-relaxed max-w-md">
-            Find out exactly where your email is losing money — in under a week. Zahra & Daniel will review your flows, campaigns, and deliverability and show you the biggest gaps.
+            Find out exactly where your email is losing money in under a week. Zahra & Daniel will review your flows, campaigns, and deliverability and show you the biggest gaps.
           </p>
         </motion.div>
 

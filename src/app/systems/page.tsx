@@ -41,7 +41,7 @@ export default function SystemsPage() {
           initial="hidden" animate="visible" variants={FADE_UP} transition={{ delay: 0.1 }}
           className="mt-6 text-xl text-[var(--color-brand-gray-dark)] max-w-3xl font-sans"
         >
-          Cracked Systems is our playbook model — we build the strategy, the frameworks, and the systems. You take ownership and execute with total confidence.
+          Cracked Systems is our playbook model. We build the strategy, the frameworks, and the systems. You take ownership and execute with total confidence.
         </motion.p>
 
         <motion.div 
