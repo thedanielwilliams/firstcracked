@@ -145,40 +145,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-14 pt-10 border-t border-white/10">
-            {/* Card 1: Benchmark */}
-            <div className="p-6 md:p-8 rounded-2xl bg-black/40 border border-white/10 flex flex-col justify-between space-y-4 hover:border-white/20 transition-colors">
-              <div>
-                <span className="text-xs uppercase tracking-widest font-bold text-[var(--color-brand-accent)] block mb-2">Target Benchmark</span>
-                <div className="text-4xl md:text-5xl font-bold text-white font-heading tracking-tight">25% – 33%</div>
-              </div>
-              <p className="text-sm text-[var(--color-brand-gray-dark)] font-medium leading-relaxed">
-                Healthy DTC email revenue share when flows & campaigns are optimized.
-              </p>
-            </div>
 
-            {/* Card 2: Unowned */}
-            <div className="p-6 md:p-8 rounded-2xl bg-black/40 border border-white/10 flex flex-col justify-between space-y-4 hover:border-white/20 transition-colors">
-              <div>
-                <span className="text-xs uppercase tracking-widest font-bold text-rose-400/90 block mb-2">Unowned Stores</span>
-                <div className="text-4xl md:text-5xl font-bold text-rose-400 font-heading tracking-tight">&lt; 10%</div>
-              </div>
-              <p className="text-sm text-[var(--color-brand-gray-dark)] font-medium leading-relaxed">
-                Average email revenue share when no dedicated team owns the channel.
-              </p>
-            </div>
-
-            {/* Card 3: First Cracked */}
-            <div className="p-6 md:p-8 rounded-2xl bg-gradient-to-b from-[var(--color-brand-accent)]/20 to-black/60 border border-[var(--color-brand-accent)]/40 flex flex-col justify-between space-y-4 shadow-xl">
-              <div>
-                <span className="text-xs uppercase tracking-widest font-bold text-[var(--color-brand-accent)] block mb-2">Our Standard</span>
-                <div className="text-4xl md:text-5xl font-bold text-white font-heading tracking-tight">100% Owned</div>
-              </div>
-              <p className="text-sm text-white/80 font-medium leading-relaxed">
-                Complete execution & strategy so email pulls its full weight.
-              </p>
-            </div>
-          </div>
         </div>
       </section>
 
