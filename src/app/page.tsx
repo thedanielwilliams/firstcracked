@@ -1,19 +1,15 @@
 "use client"
 
 import * as React from "react"
+import Image from "next/image"
 import Link from "next/link"
 import { motion, Variants } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, CheckCircle2, ChevronDown, Sparkles, Mail, Zap, Target, TrendingUp, ShieldCheck, UserCheck } from "lucide-react"
+import { ArrowRight, ChevronDown, Mail, Zap, TrendingUp } from "lucide-react"
 
 const FADE_UP: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
-}
-
-const STAGGER: Variants = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { staggerChildren: 0.12 } }
 }
 
 export default function Home() {
@@ -45,8 +41,8 @@ export default function Home() {
   const offers = [
     { title: "Free Audit", for: "See where email is losing you money", price: "Free", href: "/contact", highlight: false },
     { title: "Micro-offers", for: "Fix one specific flow, fast", price: "$400", href: "/micro-offers", highlight: false },
-    { title: "Core Flows Sprint (2 mo)", for: "Get your core email system built", price: "$3,000", href: "/services", highlight: true },
-    { title: "Email Revenue Programme (3 mo)", for: "Make email a top revenue channel", price: "$7,500", href: "/services", highlight: false }
+    { title: "Core Flows Sprint (2 mo)", for: "Get your core email system built", price: "$800", href: "/services", highlight: true },
+    { title: "Email Revenue Programme (3 mo)", for: "Make email a top revenue channel", price: "$1,500", href: "/services", highlight: false }
   ]
 
   return (
@@ -68,8 +64,6 @@ export default function Home() {
             />
           </svg>
         </div>
-
-
 
         <motion.h1 
           initial="hidden"
@@ -110,44 +104,25 @@ export default function Home() {
           </Link>
         </motion.div>
 
-        {/* Hero Visual Mockup Card */}
+        {/* Hero Visual Image Banner */}
         <motion.div 
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, scale: 0.96 }}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.4, duration: 0.8 }}
-          className="mt-14 w-full max-w-5xl rounded-3xl bg-gradient-to-b from-[#1E1E1E] to-[#121212] border border-white/10 p-6 md:p-10 shadow-2xl relative overflow-hidden text-left"
+          className="mt-14 w-full max-w-5xl rounded-3xl overflow-hidden relative aspect-[16/9] border border-white/10 shadow-2xl group"
         >
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pb-8 border-b border-white/10">
-            <div>
-              <div className="text-xs uppercase tracking-widest text-[var(--color-brand-accent)] font-bold mb-1">Klaviyo Flow Architecture</div>
-              <h3 className="text-2xl md:text-3xl font-bold font-heading text-white">Automated DTC Revenue Engine</h3>
-            </div>
-
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-8">
-            <div className="p-6 bg-black/40 rounded-2xl border border-white/5 space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-[var(--color-brand-accent)]/20 text-[var(--color-brand-accent)] flex items-center justify-center">
-                <Mail size={20} />
-              </div>
-              <h4 className="font-bold text-white text-lg">Welcome Sequence</h4>
-              <p className="text-sm text-[var(--color-brand-gray-dark)] leading-relaxed">Converts 8.4% of new signups into first-time customers within 7 days.</p>
-            </div>
-
-            <div className="p-6 bg-black/40 rounded-2xl border border-white/5 space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-[var(--color-brand-accent)]/20 text-[var(--color-brand-accent)] flex items-center justify-center">
-                <Zap size={20} />
-              </div>
-              <h4 className="font-bold text-white text-lg">Cart Recovery Flow</h4>
-              <p className="text-sm text-[var(--color-brand-gray-dark)] leading-relaxed">Recovers high-intent abandoners with timed multi-stage reminders.</p>
-            </div>
-
-            <div className="p-6 bg-black/40 rounded-2xl border border-white/5 space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-[var(--color-brand-accent)]/20 text-[var(--color-brand-accent)] flex items-center justify-center">
-                <TrendingUp size={20} />
-              </div>
-              <h4 className="font-bold text-white text-lg">Post-Purchase & VIP</h4>
-              <p className="text-sm text-[var(--color-brand-gray-dark)] leading-relaxed">Drives 2nd & 3rd purchases automatically, increasing LTV.</p>
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0E0E0E] via-transparent to-transparent z-10 pointer-events-none opacity-80"></div>
+          <Image 
+            src="/dtc_analytics.png" 
+            alt="DTC Email Marketing Analytics Workstation with Klaviyo Flows"
+            fill
+            className="object-cover transition-transform duration-700 group-hover:scale-105"
+            priority
+          />
+          <div className="absolute bottom-6 left-6 right-6 z-20 flex justify-between items-end">
+            <div className="text-left bg-black/60 backdrop-blur-md border border-white/10 px-6 py-4 rounded-2xl max-w-md">
+              <span className="text-xs uppercase tracking-widest text-[var(--color-brand-accent)] font-bold block mb-1">Klaviyo Flow Architecture</span>
+              <h3 className="text-xl font-bold font-heading text-white">Automated DTC Revenue Engine</h3>
             </div>
           </div>
         </motion.div>
@@ -224,16 +199,19 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <motion.div 
             initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={FADE_UP}
-            className="bg-[var(--color-brand-gray)] border border-white/5 rounded-3xl p-8 flex flex-col justify-between hover:border-[var(--color-brand-accent)]/40 transition-colors duration-300"
+            className="bg-[var(--color-brand-gray)] border border-white/5 rounded-3xl p-8 flex flex-col justify-between hover:border-[var(--color-brand-accent)]/40 transition-colors duration-300 group overflow-hidden"
           >
             <div>
-              <div className="w-12 h-12 rounded-2xl bg-[var(--color-brand-accent)]/15 text-[var(--color-brand-accent)] flex items-center justify-center mb-6 font-bold text-xl">
+              <div className="relative w-full h-44 rounded-2xl overflow-hidden mb-6 border border-white/10">
+                <Image src="/flowchart.png" alt="Email flows flowchart" fill className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+              </div>
+              <div className="w-10 h-10 rounded-xl bg-[var(--color-brand-accent)]/15 text-[var(--color-brand-accent)] flex items-center justify-center mb-4 font-bold text-lg">
                 01
               </div>
-              <h3 className="text-2xl font-bold font-heading mb-4 text-[var(--color-brand-offwhite)]">
+              <h3 className="text-2xl font-bold font-heading mb-3 text-[var(--color-brand-offwhite)]">
                 Build the flows that sell on autopilot
               </h3>
-              <p className="text-[var(--color-brand-gray-dark)] leading-relaxed text-base">
+              <p className="text-[var(--color-brand-gray-dark)] leading-relaxed text-sm">
                 Welcome, abandoned cart, browse abandonment, post-purchase, win-back — the automated sequences that recover revenue while you sleep.
               </p>
             </div>
@@ -241,16 +219,19 @@ export default function Home() {
 
           <motion.div 
             initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={FADE_UP} transition={{ delay: 0.1 }}
-            className="bg-[var(--color-brand-gray)] border border-white/5 rounded-3xl p-8 flex flex-col justify-between hover:border-[var(--color-brand-accent)]/40 transition-colors duration-300"
+            className="bg-[var(--color-brand-gray)] border border-white/5 rounded-3xl p-8 flex flex-col justify-between hover:border-[var(--color-brand-accent)]/40 transition-colors duration-300 group overflow-hidden"
           >
             <div>
-              <div className="w-12 h-12 rounded-2xl bg-[var(--color-brand-accent)]/15 text-[var(--color-brand-accent)] flex items-center justify-center mb-6 font-bold text-xl">
+              <div className="relative w-full h-44 rounded-2xl overflow-hidden mb-6 border border-white/10">
+                <Image src="/megaphone.png" alt="Revenue campaigns" fill className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+              </div>
+              <div className="w-10 h-10 rounded-xl bg-[var(--color-brand-accent)]/15 text-[var(--color-brand-accent)] flex items-center justify-center mb-4 font-bold text-lg">
                 02
               </div>
-              <h3 className="text-2xl font-bold font-heading mb-4 text-[var(--color-brand-offwhite)]">
+              <h3 className="text-2xl font-bold font-heading mb-3 text-[var(--color-brand-offwhite)]">
                 Run campaigns that give your list a reason to buy
               </h3>
-              <p className="text-[var(--color-brand-gray-dark)] leading-relaxed text-base">
+              <p className="text-[var(--color-brand-gray-dark)] leading-relaxed text-sm">
                 Planned, written and sent on a rhythm, not whenever someone remembers.
               </p>
             </div>
@@ -258,16 +239,19 @@ export default function Home() {
 
           <motion.div 
             initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={FADE_UP} transition={{ delay: 0.2 }}
-            className="bg-[var(--color-brand-gray)] border border-white/5 rounded-3xl p-8 flex flex-col justify-between hover:border-[var(--color-brand-accent)]/40 transition-colors duration-300"
+            className="bg-[var(--color-brand-gray)] border border-white/5 rounded-3xl p-8 flex flex-col justify-between hover:border-[var(--color-brand-accent)]/40 transition-colors duration-300 group overflow-hidden"
           >
             <div>
-              <div className="w-12 h-12 rounded-2xl bg-[var(--color-brand-accent)]/15 text-[var(--color-brand-accent)] flex items-center justify-center mb-6 font-bold text-xl">
+              <div className="relative w-full h-44 rounded-2xl overflow-hidden mb-6 border border-white/10">
+                <Image src="/blueprint.png" alt="Segment and test" fill className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+              </div>
+              <div className="w-10 h-10 rounded-xl bg-[var(--color-brand-accent)]/15 text-[var(--color-brand-accent)] flex items-center justify-center mb-4 font-bold text-lg">
                 03
               </div>
-              <h3 className="text-2xl font-bold font-heading mb-4 text-[var(--color-brand-offwhite)]">
+              <h3 className="text-2xl font-bold font-heading mb-3 text-[var(--color-brand-offwhite)]">
                 Segment, test and optimise
               </h3>
-              <p className="text-[var(--color-brand-gray-dark)] leading-relaxed text-base">
+              <p className="text-[var(--color-brand-gray-dark)] leading-relaxed text-sm">
                 So the right message reaches the right buyer, and every send teaches us how to earn more from the next one.
               </p>
             </div>
@@ -275,30 +259,39 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Proof — See How We Think Section */}
+      {/* Proof — See How We Think Section with Image */}
       <section className="px-6 md:px-12 max-w-7xl mx-auto w-full">
-        <div className="bg-[var(--color-brand-gray)] border border-white/5 rounded-3xl p-8 md:p-16 flex flex-col gap-10">
-          <div>
-            <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-[var(--color-brand-accent)] mb-4">
+        <div className="bg-[var(--color-brand-gray)] border border-white/5 rounded-3xl p-8 md:p-14 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="lg:col-span-7 space-y-6">
+            <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-[var(--color-brand-accent)]">
               <span className="w-2 h-2 rounded-full bg-[var(--color-brand-accent)]"></span>
               Proof — see how we think
             </div>
-            <h2 className="text-3xl md:text-5xl font-heading font-bold text-[var(--color-brand-offwhite)] mb-6">
+            <h2 className="text-3xl md:text-5xl font-heading font-bold text-[var(--color-brand-offwhite)] leading-tight">
               We're a young studio, so we'll show you rather than tell you.
             </h2>
-            <p className="text-lg md:text-xl text-[var(--color-brand-gray-dark)] leading-relaxed max-w-4xl">
+            <p className="text-lg text-[var(--color-brand-gray-dark)] leading-relaxed">
               Every week we tear down a real DTC brand's email, we sign up, we abandon a cart, we screenshot what arrives, and we break down exactly what's costing them revenue and what we'd do instead. No theory, no fluff. If you want to know whether we understand your email before you spend a penny, read one.
+            </p>
+
+            <div className="pt-2">
+              <Button asChild size="lg" className="bg-[var(--color-brand-accent)] text-white hover:bg-[var(--color-brand-blue-dark)] rounded-full font-bold px-8">
+                <Link href="/teardowns">Browse the teardowns →</Link>
+              </Button>
+            </div>
+
+            <p className="pt-4 text-xs text-[var(--color-brand-gray-dark)] leading-relaxed border-t border-white/10">
+              Behind the scenes, the email work we've run for brands has performed well — strong open and click-through, and sequences that pulled their weight in real launches. We keep client specifics private, but we're happy to talk you through what we did on a call.
             </p>
           </div>
 
-          <div>
-            <Button asChild size="lg" className="bg-[var(--color-brand-accent)] text-white hover:bg-[var(--color-brand-blue-dark)] rounded-full font-bold px-8">
-              <Link href="/teardowns">Browse the teardowns →</Link>
-            </Button>
-          </div>
-
-          <div className="pt-8 border-t border-white/10 text-sm md:text-base text-[var(--color-brand-gray-dark)] leading-relaxed max-w-4xl">
-            Behind the scenes, the email work we've run for brands has performed well — strong open and click-through, and sequences that pulled their weight in real launches. We keep client specifics private, but we're happy to talk you through what we did on a call.
+          <div className="lg:col-span-5 relative aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 shadow-2xl group">
+            <Image 
+              src="/teardown_wall.png" 
+              alt="Email Teardown analysis wall with flow diagrams" 
+              fill 
+              className="object-cover group-hover:scale-105 transition-transform duration-500" 
+            />
           </div>
         </div>
       </section>
@@ -415,10 +408,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Who's Behind It Section */}
+      {/* Who's Behind It Section with Team Image */}
       <section className="px-6 md:px-12 max-w-7xl mx-auto w-full">
-        <div className="bg-[var(--color-brand-gray)] border border-white/5 rounded-3xl p-8 md:p-16">
-          <div className="max-w-4xl space-y-6">
+        <div className="bg-[var(--color-brand-gray)] border border-white/5 rounded-3xl p-8 md:p-14 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div className="lg:col-span-7 space-y-6">
             <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-[var(--color-brand-accent)]">
               <span className="w-2 h-2 rounded-full bg-[var(--color-brand-accent)]"></span>
               Who's behind it
@@ -428,11 +421,11 @@ export default function Home() {
               First Cracked is Zahra and Daniel
             </h2>
             
-            <p className="text-lg md:text-xl text-[var(--color-brand-gray-dark)] leading-relaxed font-sans">
+            <p className="text-lg text-[var(--color-brand-gray-dark)] leading-relaxed font-sans">
               Two email specialists with around four years each running email across Klaviyo, Shopify, ConvertKit and Mailchimp. No account managers, no juniors. The two people you hire are the two people doing the work.
             </p>
 
-            <div className="pt-4">
+            <div className="pt-2">
               <Link 
                 href="/about" 
                 className="inline-flex items-center gap-2 text-base font-bold text-[var(--color-brand-accent)] hover:underline"
@@ -440,6 +433,15 @@ export default function Home() {
                 More about us →
               </Link>
             </div>
+          </div>
+
+          <div className="lg:col-span-5 relative aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 shadow-2xl group">
+            <Image 
+              src="/team.png" 
+              alt="First Cracked operators Zahra and Daniel" 
+              fill 
+              className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500" 
+            />
           </div>
         </div>
       </section>

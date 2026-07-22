@@ -23,7 +23,7 @@ export default function ServicesPage() {
       title: "Core Flows Sprint", 
       duration: "2 Months", 
       for: "Get your core email system built", 
-      price: "$3,000", 
+      price: "$800", 
       desc: "A dedicated two-month sprint to build, set up, and launch your automated Klaviyo revenue engine across all core sequences.",
       cta: "Start a sprint"
     },
@@ -31,7 +31,7 @@ export default function ServicesPage() {
       title: "Email Revenue Programme", 
       duration: "3 Months", 
       for: "Make email a top revenue channel", 
-      price: "$7,500", 
+      price: "$1,500", 
       desc: "Comprehensive programme combining core flows, active campaign management, segmentation, deliverability, and ongoing testing to drive 25-33% of store revenue.",
       cta: "Apply for programme"
     }
