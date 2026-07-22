@@ -311,7 +311,7 @@ export default function Home() {
         <div className="bg-[var(--color-brand-accent)]/10 border border-[var(--color-brand-accent)]/30 rounded-3xl p-8 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
           <div>
             <span className="text-sm uppercase font-bold tracking-widest text-[var(--color-brand-accent)] block mb-1">Our Philosophy</span>
-            <h4 className="text-2xl md:text-3xl font-heading font-bold text-white">Cheap proof first. Big commitment last.</h4>
+            <h4 className="text-2xl md:text-3xl font-heading font-bold text-white">We'd rather prove it than pitch it.</h4>
           </div>
           <Button asChild size="lg" className="bg-[var(--color-brand-accent)] text-white hover:bg-[var(--color-brand-blue-dark)] rounded-full font-bold px-8 shrink-0">
             <Link href="/contact">Book a free audit</Link>

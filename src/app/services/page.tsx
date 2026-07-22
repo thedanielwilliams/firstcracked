@@ -48,7 +48,7 @@ export default function ServicesPage() {
           Email services engineered for DTC growth
         </h1>
         <p className="text-lg md:text-xl text-[var(--color-brand-gray-dark)]">
-          Cheap proof first. Big commitment last. Pick where you want to start.
+          We'd rather prove it than pitch it. Pick where you want to start.
         </p>
       </div>
 
