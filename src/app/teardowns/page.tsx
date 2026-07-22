@@ -33,7 +33,7 @@ export default function TeardownsPage() {
       <div className="text-center max-w-3xl mx-auto space-y-4">
         <div className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-[var(--color-brand-accent)]">
           <span className="w-2 h-2 rounded-full bg-[var(--color-brand-accent)]"></span>
-          Teardowns: see how we think
+          Teardowns
         </div>
         <h1 className="text-4xl md:text-6xl font-heading font-bold text-[var(--color-brand-offwhite)]">
           Real DTC emails, broken down.

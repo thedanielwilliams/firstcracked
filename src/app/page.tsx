@@ -232,7 +232,7 @@ export default function Home() {
           <div className="lg:col-span-7 space-y-6">
             <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-[var(--color-brand-accent)]">
               <span className="w-2 h-2 rounded-full bg-[var(--color-brand-accent)]"></span>
-              Proof: see how we think
+              Proof
             </div>
             <h2 className="text-3xl md:text-5xl font-heading font-bold text-[var(--color-brand-offwhite)] leading-tight">
               We're a young studio, so we'll show you rather than tell you.
